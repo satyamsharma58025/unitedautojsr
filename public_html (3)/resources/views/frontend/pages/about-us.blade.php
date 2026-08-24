@@ -9,6 +9,8 @@
 
 <div class="container">
 
+@if($about_us)
+
     <div class="row">
         <div class="col-md-5">
             <!-- About Image -->
@@ -97,6 +99,15 @@
         </div>
 
     </div>
+
+@else
+    <div class="row">
+        <div class="col-12">
+            <h1 class="wptb-item--title text-white">About United Auto</h1>
+            <p class="wptb-item--description text-white">Our about information will be available soon.</p>
+        </div>
+    </div>
+@endif
 
 </div>
 

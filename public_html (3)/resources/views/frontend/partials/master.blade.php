@@ -1,13 +1,9 @@
 @php
     use App\Models\CompanySetting;
     $company = CompanySetting::first();
+    $favicon_icon = $company?->favicon_icon ?? 'favicon.png';
     $logo_image = "";
 @endphp
-@if ($company)
-    @php
-        $favicon_icon = $company->favicon_icon;
-    @endphp
-@endif
 <!DOCTYPE html>
 <html lang="zxx">
     <head>
@@ -28,8 +24,38 @@
         <!-- Page Title -->
         <title>@yield('title', 'United Auto')</title>    
         
-        <!-- Styles Include -->
-        <link rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        
+        <!-- Bootstrap Icons -->
+        <link href="{{ asset('front/assets/fonts/bootstrap-icons-1.1/font/bootstrap-icons.css') }}" rel="stylesheet">
+        
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="{{ asset('front/plugins/jquery_ui/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/wow/animate.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/swiper/swiper-bundle.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/odometer/odometer-theme-default.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/fancybox/jquery.fancybox.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/fullcalendar/fullcalendar.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/flatpickr/flatpickr.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/nice-select/nice-select.css') }}">
+        
+        <!-- Core Styles -->
+        <link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/global.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/header.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/preloader.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/shop.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/components.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/contact.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/blog.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/sidebar.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/portfolio.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/light.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/animation.css') }}">
         
     </head>
     <body>
