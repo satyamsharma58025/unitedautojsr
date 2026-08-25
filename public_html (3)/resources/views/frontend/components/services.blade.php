@@ -56,7 +56,7 @@
                             </div>
                             
                             <div class="wptb-item--image">
-                                <a href="{{ route('service.details', $service->slug) }}" class="wptb-item-link"><img src="{{ asset('assets/category/'.$service->category_image) }}" alt="img"></a>
+                                <a href="{{ route('service.details', $service->slug) }}" class="wptb-item-link"><img src="{{ asset($service->category_image) }}" alt="img"></a>
                             </div>
                             
                             <div class="wptb-item--button">

@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // Make URL generation follow the incoming request when handling HTTP requests.
         // Guard against running in console (artisan, queue workers, scheduler, etc.).
-        if (! $this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole() && ! $this->app->environment('production')) {
             try {
                 $request = request();
 

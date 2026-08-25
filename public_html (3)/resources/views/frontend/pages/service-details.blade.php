@@ -40,7 +40,7 @@
                 <div class="service-image">
 
                     <img 
-                        src="{{ asset('assets/category/' . $service->category_image) }}" 
+                        src="{{ asset($service->category_image) }}" 
                         alt="{{ $service->name }}"
                         class="img-fluid rounded">
 
